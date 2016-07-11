@@ -1,48 +1,84 @@
 
-\section{Introduction}
+\section{Motivation and Goals}
 \label{sec:introduction}
 
-Over the last several decades we have observed the development of 
-a large collection of specification and modeling languages and 
-associated methodologies, and tools. Their purpose is to 
-support modeling of requirements and high-level designs before 
-programming is initiated. Agile approaches advocate to avoid 
-explicit modeling entirely and suggest to go directly to coding. 
-Other approaches advocate avoiding manual “coding” in a 
-programming 
-language entirely and suggest instead the generation of code 
-directly from the models. This way modeling languages replace 
-programming languages.  We can divide these modeling languages 
-into formal specification languages (formal methods), usually 
-focusing on textual languages based on mathematical logic and set 
-theory, and associated proof tools (theorem provers, model 
-checkers, etc.), and on the other hand model-based engineering 
-languages (UML, SysML, Modelica, Mathematica, …), focusing more on 
-d esign, code generation and simulation. Many of these modeling 
-languages have similarities with programming languages.In parallel, and frankly seemingly independent, we have seen the 
-development of numerous new programming languages. Few languages 
-have had the success of C, which still today is the main 
-programming language for embedded systems. The success is so 
-outstanding that nearly no progress wrt. praxis has been made in 
-this domain (embedded programming) since the 1970ties.  In 
-application programming a collection of new languages came ago 
-such as Ada, C++, Eiffel etc. At the same time we have seen 
-several high-level languages appear targeting the softer side of 
-software engineering (such as web-programming, user interfaces, 
-scripting), including languages such as Java, JavaScript, Ruby, 
-Python and Scala.  More academic languages include Haskell and the 
-ML family, including OCaml.
+Since the 60s we have seen tremendous amount of scientific and 
+methodological work in the fields of specification, design and, 
+programming languages. In a simplified view, as an attempt to 
+impose some structure on this work, we can distinguish between 
+three lines of work: formal methods, model-based engineering, and 
+programming languages. Formal methods include, usually textual, 
+formalisms such as VDM, Z, B, RAISE, OBJ, etc. Such formalisms are 
+usually based on mathematical concepts, such as functions, 
+relations, set theory, etc. A specification typically consists of
+signature, a collection of names and their types, and axioms over 
+the signature, constraining the values the names can specifically 
+denote. A specification as such denotes a set of models, each 
+providing a binding of values to the names, satisfying the axioms.
+Such formal methods usually come equipped with proof systems, such 
+that one can prove properties of the specifications, for example 
+consistency of axioms, or that certain theorem are consequences of 
+the axioms. The characteristic of these formalisms is their 
+representation as text, satisfying grammars.
 
-A closer look shows that a tight integration between specification and verification logic, programming languages, and graphical modeling notations as well as modeling concepts is needed. It is the goal of the track to discuss the relationship between modeling and programming, with the possible objective of achieving an agreement of what a unification of these concepts would mean at an abstract level, and what it would bring as benefits on the practical level. What are the trends in the three domains:  
-formal specification and verification, 
-model-based engineering, and programming, which can be considered to be unifying these domains. Is the time is ripe for another attempt to bring things closer together?
+Starting later in the 1980ties, what we can call the model-based 
+engineering community, developed graphical formalisms such, most 
+prominently represented by UML and later SysML. These formalisms 
+offer graphical notation for defining data structures as ``nodes 
+and edge'' diagrams, and behavioral diagrams such as state machines 
+and message sequence diagrams. These formalisms specifically 
+address the ease of adoption amongst engineers. It is clear that
+these techniques have become more popular in industry than formal 
+methods, and in part most likely due to the graphical nature of 
+these languages. However, these formalisms are complex (the 
+standard defining UML is much larger than the definition of any 
+formal method or programming language), are incomplete (the UML
+standard for example has no expression language although OCL is
+a recommended add-on), and they lack commonly agreed up semantics. 
+To some extent one can argue that they are in need of some form of 
+textual representation in order for the scientific community to 
+provide semantics. We know how to give semantics to text, we do not 
+have much experience (as a community) in giving semantics to 2-
+dimensional graphical languages.
 
-This paper is organized as follows.
-In Section \ref{sec:trends} we give a brief overview of some 
-of the trends in formal specification, model-based programming and system engineering, and programming, that we consider 
-important. 
-Section \ref{sec:contributions} presents the papers presented at the track, and included in these proceedings.
-Finally Section \ref{sec:conclusion} outlines
-brief discussion points to be reflected on
-when considering a unified approach, as well
-as a conclusion.
+Finally, programming languages have evolved over time, starting 
+with numerical machine code, then assembly languages, and 
+transitioning higher level languages with FORTRAN in the late 
+1950ties. Numerous programming languages have been developed since 
+then. The C programming language has  since its creation in the 
+early 1970ties conquered the embedded software world in an 
+impressive manner. Later efforts, however, have attempted to
+create even higher-level languages. These include language such as
+Java and Python, in which collections such as sets, lists and maps 
+are built-in, either as constructs or as systems libraries. 
+Especially the academic community has experimented with functional 
+programming languages, such as ML, OCaml, and Haskell, and more 
+recently the integration of object-oriented programming and 
+functional programming, as in for example Scala.
+
+Each of the formalisms mentioned above each have advantageous features not owned by other formalisms. However, what is perhaps more important is that these formalisms have many language constructs in common, and to  such an extent that one can ask the controversial question: 
+{\em Should we strive towards a unified view of modeling and 
+programming?} Less controversial questions are: 
+{\em What kind of infusion can be imagined in between formalisms?} 
+(what can each field learn from other fields),
+or: {\em how do we combine models written in different languages?}. 
+For example, can programming languages be extended to support 
+modeling, and can visualization become a standard part of 
+programming languages? Could we imagine one universal specification 
+and programming formalism? Should we accept that models will be 
+written in numerous languages, even within one project, and instead 
+focus on how to integrate models in different languages?
+These are some of the questions that this track addresses. 
+
+In summary, it is the goal of the meeting to discuss the 
+relationship between modeling and programming, with the possible 
+objective of achieving an agreement of what a unification of these 
+concepts would mean at an abstract level, and what it would bring 
+as benefits on the practical level. What are the trends in the 
+three domains: programming, formal specification and verification, 
+and model-based engineering, which can be considered to be unifying 
+these domains. We want to discuss whether the time is ripe for 
+another attempt to bring things closer together. The track will be 
+divided into four sessions: meta-modeling, model-based engineering 
+(graphical tools), formal specification languages, and finally 
+programming languages.
