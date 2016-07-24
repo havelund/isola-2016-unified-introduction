@@ -4,14 +4,14 @@
 
 Since the 60s we have seen tremendous amount of scientific and 
 methodological work in the fields of specification, design and, 
-programming languages. In spite of the very high value of this work, however, this effort has found its limitation by the fact that we do not have a sufficient integration of specification, modeling, and programming languages, as well as tools that support the development engineer in applying methods and techniques from all of these. A tighter integration between specification and verification logics, graphical modeling notations, and programming languages is needed.
+programming languages. In spite of the very high value of this work, however, this effort has found its limitation by the fact that we do not have a sufficient integration of these languages, as well as tools that support the development engineer in applying the corresponding methods and techniques. A tighter integration between specification and verification logics, graphical modeling notations, and programming languages is needed.
 
 In a (possibly over) simplified view, as an attempt to impose some 
 structure on this work, we can distinguish between three lines of 
 work: formal methods, model-based engineering, and 
 programming languages. Formal methods include, usually textual, 
-formalisms such as VDM, Z, CIP, and RAISE, but also more or less 
-automated theorem proving systems such as Coq, Isabelle/HOL and 
+formalisms such as VDM, Z, B, CIP, and RAISE, but also more or less 
+automated theorem proving systems such as Coq, Isabelle, and 
 PVS. Such formalisms are usually based on mathematical 
 concepts, such as functions, relations, set theory, etc. A 
 specification typically 
@@ -26,7 +26,7 @@ consequences of the axioms. A common characteristic of
 these formalisms is their representation as text, defined by context-free grammars, and their formalization in semantics and/or logical proof systems.
 
 Starting later in the 1980ties, the model-based 
-engineering community, developed graphical formalisms, most 
+engineering community developed graphical formalisms, most 
 prominently represented by UML and later SysML. These formalisms 
 offer graphical notation for defining data structures as ``nodes 
 and edge'' diagrams, and behavioral diagrams such as state machines 
@@ -42,12 +42,12 @@ a recommended add-on), and they lack commonly agreed up semantics.
 To some extent one can argue that this community is in need of some form of 
 textual representation in order for the scientific community to 
 provide semantics. We know how to give semantics to text, we do not 
-have much experience (as a community) in giving semantics to 2-
-dimensional languages.
+have much experience (as a community) in giving semantics to 
+two-dimensional languages.
 
 Finally, programming languages have evolved over time, starting 
 with numerical machine code, then assembly languages, and 
-transitioning higher level languages with FORTRAN in the late 
+transitioning to higher-level languages with FORTRAN in the late 
 1950ties. Numerous programming languages have been developed since 
 then. The C programming language has  since its creation in the 
 early 1970ties conquered the embedded software world in an 
@@ -60,7 +60,7 @@ programming languages, such as ML, OCaml, and Haskell, and more
 recently the integration of object-oriented programming and 
 functional programming, as in for example Scala.
 
-Each of the formalisms mentioned above each have advantageous features not owned by other formalisms. However, what is perhaps more important is that these formalisms have many language constructs in common, and to  such an extent that one can ask the controversial question: 
+Each of the formalisms mentioned above have advantageous features not owned by other formalisms. However, what is perhaps more important is that these formalisms have many language constructs in common, and to  such an extent that one can ask the controversial question: 
 {\em Should we strive towards a unified view of modeling and 
 programming?} 
 %Less controversial questions are: 
@@ -83,9 +83,10 @@ as benefits on the practical level. What are the trends in the
 three domains: formal specification and verification,
 model-based engineering, and
 programming, which can be considered 
-to be unifying these domains. We want to discuss whether the time 
-is ripe for another attempt to bring things closer together. The 
-track will be divided into four sessions: meta-modeling (including 
-domain-specific languages), 
+to support a unification of these domains. We want to discuss whether the time 
+is ripe for another attempt to bring things closer together. 
+
+The track will be divided into four sessions: meta-modeling 
+(including domain-specific languages), 
 model-based engineering (graphical tools), formal specification 
 languages, and finally programming languages.
