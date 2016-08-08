@@ -2,20 +2,20 @@
 \section{Motivation and Goals}
 \label{sec:introduction}
 
-Since the 60s we have seen tremendous amount of scientific and 
-methodological work in the fields of specification, design and, 
+Since the 1960s we have seen tremendous amount of scientific and 
+methodological work in the fields of specification, design, and 
 programming languages. In spite of the very high value of this work, however, this effort has found its limitation by the fact that we do not have a sufficient integration of these languages, as well as tools that support the development engineer in applying the corresponding methods and techniques. A tighter integration between specification and verification logics, graphical modeling notations, and programming languages is needed.
 
 In a (possibly over) simplified view, as an attempt to impose some 
 structure on this work, we can distinguish between three lines of 
 work: formal methods, model-based engineering, and 
 programming languages. Formal methods include, usually textual, 
-formalisms such as VDM, Z, B, CIP, and RAISE, but also more or less 
+formalisms such as VDM, CIP, Z, B, Event-B, ASM, TLA+, Alloy, and RAISE, but also more or less 
 automated theorem proving systems such as Coq, Isabelle, and 
 PVS. Such formalisms are usually based on mathematical 
 concepts, such as functions, relations, set theory, etc. A 
 specification typically 
-consists of signature, a collection of names and their types, and 
+consists of a signature, a collection of names and their types, and 
 axioms over  the signature, constraining the values that 
 the names can denote. A specification as such denotes a set of 
 models, each providing a binding of values to the names, satisfying 
@@ -23,9 +23,13 @@ the axioms. Such formal methods usually come equipped with proof
 systems, such that one can prove properties of the specifications, 
 for example consistency of axioms, or that certain theorems are 
 consequences of the axioms. A common characteristic of 
-these formalisms is their representation as text, defined by context-free grammars, and their formalization in semantics and/or logical proof systems.
+these formalisms is their representation as text, defined by context-free grammars, and their formalization in terms of semantics and/or logical proof systems. 
+%
+In parallel one has seen several model checkers appearing, such as
+SPIN, SMV, FDR, and UPPAAL. These usually prioritize efficient verification algorithms over expressive and convenient 
+specification languages. Exceptions are more recent model checkers for programming languages, including for example Java PathFinder (JPF).
 
-Starting later in the 1980ties, the model-based 
+Starting later in the 1980s, the model-based 
 engineering community developed graphical formalisms, most 
 prominently represented by UML and later SysML. These formalisms 
 offer graphical notation for defining data structures as ``nodes 
@@ -33,24 +37,28 @@ and edge'' diagrams, and behavioral diagrams such as state machines
 and message sequence diagrams. These formalisms specifically 
 address the ease of adoption amongst engineers. It is clear that
 these techniques have become more popular in industry than formal 
-methods, and in part likely due to the graphical nature of 
+methods, in part likely due to the graphical nature of 
 these languages. However, these formalisms are complex (the 
 standard defining UML is much larger than the definition of any 
 formal method or programming language), are incomplete (the UML
 standard for example has no expression-language, although OCL is
 a recommended add-on), and they lack commonly agreed up semantics. 
-To some extent one can argue that this community is in need of some form of 
-textual representation in order for the scientific community to 
-provide semantics. We know how to give semantics to text, we do not 
-have much experience (as a community) in giving semantics to 
-two-dimensional languages.
+To some extent one can argue, that this community is in need of a 
+well-defined non-graphical representation of the abstract syntax
+of UML, in order for the language community to provide 
+semantics. We know how to give semantics to abstract syntax
+represented as text, we do not have much experience (as a community) in giving semantics to two-dimensional languages without first reducing to such abstract syntax.
+%
+Many attempts have been made to give semantics to parts of UML,
+and they all start by first defining an abstract syntax for the
+relevant part, resulting in repeated partial work.
 
 Finally, programming languages have evolved over time, starting 
 with numerical machine code, then assembly languages, and 
 transitioning to higher-level languages with FORTRAN in the late 
-1950ties. Numerous programming languages have been developed since 
+1950s. Numerous programming languages have been developed since 
 then. The C programming language has  since its creation in the 
-early 1970ties conquered the embedded software world in an 
+early 1970s conquered the embedded software world in an 
 impressive manner. Later efforts, however, have attempted to
 create even higher-level languages. These include language such as
 Java and Python, in which collections such as sets, lists and maps 
