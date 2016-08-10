@@ -15,7 +15,7 @@ automated theorem proving systems such as Coq, Isabelle, and
 PVS. Such formalisms are usually based on mathematical 
 concepts, such as functions, relations, set theory, etc. A 
 specification typically 
-consists of a signature, a collection of names and their types, and 
+consists of a signature, i.e. a collection of names and their types, and 
 axioms over  the signature, constraining the values that 
 the names can denote. A specification as such denotes a set of 
 models, each providing a binding of values to the names, satisfying 
@@ -43,15 +43,22 @@ standard defining UML is much larger than the definition of any
 formal method or programming language), are incomplete (the UML
 standard for example has no expression-language, although OCL is
 a recommended add-on), and they lack commonly agreed up semantics. 
-One may well argue that there is a need for a 
-well-defined non-graphical representation of the abstract syntax
-of UML, in order for the language community to provide 
-semantics. We know how to give semantics to abstract syntax
-represented as text, we do not have much experience in giving semantics to two-dimensional languages without first reducing to such abstract syntax.
-%
-Many attempts have been made to give semantics to parts of UML,
-and they all start by first defining an abstract syntax for the
-relevant part, resulting in repeated partial work.
+%%%
+This is not too surprising as UML has been designed on the basis of an 
+intuitive understanding of the semantics of its individual parts and concepts, 
+and not under the perspective of a potential formal semantics ideally covering 
+the entire UML. This leaves users some freedom of interpretation, in particular 
+concerning the conceptual interplay of individual model types and often leads 
+to misunderstandings, but it has still been sufficient in practice in order to 
+support tool-based system development, even by providing, e.g., partial code 
+generation. On the other hand, it is also responsible for the only very partial 
+successes of the decades of attempts to provide formal semantics to UML. One may, 
+therefore, argue that (the abstract syntax and intuitive semantics of) UML, as it 
+stands, is not adequately designed to support a foundation in terms of a formal 
+semantics. It would therefore be interesting to reconsider the design of UML 
+with the dedicated goal to provide a formal semantics and thereby reach a next 
+level of maturity.
+%%%
 
 Finally, programming languages have evolved over time, starting 
 with numerical machine code, then assembly languages, and 
